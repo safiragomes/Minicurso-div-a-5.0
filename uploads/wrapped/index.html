@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Meu Wrapped 2026 🩷</title>
+  </head>
+
+  <body>
+    <!-- BARRA DE CIMA: cada link leva para uma parte da página -->
+    <nav class="navbar">
+      <img id="logo" src="./assets/logo.png" alt="logo" />
+      <div class="links">
+        <a href="#inicio">Início</a>
+        <a href="#musicas">Minhas músicas</a>
+        <a href="#sobre-mim">Sobre mim</a>
+        <a href="#minha-era">Minha era</a>
+        <button id="theme-button">
+          <img src="./assets/moon.svg" alt="tema escuro" width="20" />
+        </button>
+        <script src="./dark-mode.js"></script>
+      </div>
+    </nav>
+
+    <!-- APRESENTAÇÃO -->
+    <section class="main" id="inicio">
+      <div class="text">
+        <h1>Maysa's Wrapped <span class="highlight">2026</span></h1>
+        <p>Um resumo de tudo que marcou o meu ano: as músicas que mais ouvi, o que eu amo e a fase que estou vivendo.</p>
+        <a href="#musicas">
+          <button class="my-story">Ver meu Wrapped</button>
+        </a>
+      </div>
+      <!-- troque pela sua foto -->
+      <img id="picture" src="./assets/minha-foto.jpg" alt="minha foto" />
+    </section>
+
+    <!-- TOP 3 MÚSICAS -->
+    <div class="secao" id="musicas">
+      <h2>✦ Top 3 músicas do momento ✦</h2>
+      <div class="cards">
+
+        <div class="card">
+          <span class="numero">01</span>
+          <img src="./assets/capa1.jpg" alt="capa da música 1" />
+          <h3>Nome da música</h3>
+          <p>Artista</p>
+          <!-- cole aqui o link do YouTube -->
+          <a class="ouvir" href="https://www.youtube.com/" target="_blank">▶ Ouvir no YouTube</a>
+        </div>
+
+        <div class="card">
+          <span class="numero">02</span>
+          <img src="./assets/capa2.jpg" alt="capa da música 2" />
+          <h3>Nome da música</h3>
+          <p>Artista</p>
+          <a class="ouvir" href="https://www.youtube.com/" target="_blank">▶ Ouvir no YouTube</a>
+        </div>
+
+        <div class="card">
+          <span class="numero">03</span>
+          <img src="./assets/capa3.jpg" alt="capa da música 3" />
+          <h3>Nome da música</h3>
+          <p>Artista</p>
+          <a class="ouvir" href="https://www.youtube.com/" target="_blank">▶ Ouvir no YouTube</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SOBRE MIM -->
+    <div class="secao" id="sobre-mim">
+      <h2>✦ Sobre mim ✦</h2>
+      <div class="cards">
+
+        <div class="card rosa">
+          <h3>Minha personalidade</h3>
+          <p>70% café ☕</p>
+          <p>20% código 💻</p>
+          <p>10% sanidade 🫠</p>
+        </div>
+
+        <div class="card verde">
+          <h3>Top 3 coisas que amo</h3>
+          <p>01 música</p>
+          <p>02 praia</p>
+          <p>03 tecnologia</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MINHA ERA -->
+    <div class="secao" id="minha-era">
+      <h2>✦ Minha era atual ✦</h2>
+      <div class="era">
+        <p>✨ tentando aprender frontend ✨</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Maysa's Wrapped. Feito com 🩷 no minicurso &lt;div&gt;a.</p>
+    </footer>
+  </body>
+</html>

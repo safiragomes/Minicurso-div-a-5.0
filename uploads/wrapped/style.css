@@ -1,0 +1,186 @@
+/* ===== CORES =====
+   rosa:    #ff6ba8
+   laranja: #ff6419
+   light:   #fff5fa
+   verde:   #b4fa64
+   dark:    #131313
+   fonte:   #423a39
+*/
+
+/* A página inteira */
+body {
+  margin: 0;
+  background-color: #fff5fa;
+  color: #423a39;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== BARRA DE CIMA ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #131313;
+  padding: 15px 60px;
+}
+
+#logo {
+  height: 50px;
+}
+
+.links a {
+  color: #fff5fa;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+.links a:hover {
+  color: #ff6ba8;
+}
+
+#theme-button {
+  background-color: #ff6ba8;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+/* ===== APRESENTAÇÃO ===== */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+}
+
+.text {
+  width: 50%;
+}
+
+.text h1 {
+  font-size: 56px;
+}
+
+.text p {
+  font-size: 20px;
+}
+
+.highlight {
+  color: #ff6419;
+}
+
+.my-story {
+  background-color: #ff6ba8;
+  color: #131313;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.my-story:hover {
+  background-color: #ff6419;
+}
+
+#picture {
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #b4fa64;
+}
+
+/* ===== SEÇÕES ===== */
+.secao {
+  padding: 50px 60px;
+  text-align: center;
+}
+
+.secao h2 {
+  font-size: 36px;
+  color: #ff6419;
+}
+
+/* Organiza os cards um do lado do outro */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Cada card */
+.card {
+  background-color: #131313;
+  color: #fff5fa;
+  width: 280px;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.card img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.numero {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  color: #b4fa64;
+  margin-bottom: 10px;
+}
+
+/* Botão do YouTube */
+.ouvir {
+  display: inline-block;
+  background-color: #ff6419;
+  color: #fff5fa;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.ouvir:hover {
+  background-color: #ff6ba8;
+}
+
+/* Cards coloridos da parte "Sobre mim" */
+.rosa {
+  background-color: #ff6ba8;
+  color: #131313;
+  font-size: 20px;
+}
+
+.verde {
+  background-color: #b4fa64;
+  color: #131313;
+  font-size: 20px;
+}
+
+/* Faixa da "Minha era" */
+.era {
+  background-color: #ff6419;
+  color: #fff5fa;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background-color: #131313;
+  color: #fff5fa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}

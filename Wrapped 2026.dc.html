@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'DM Sans',sans-serif}
+a{color:#ff6ba8;text-decoration:none}
+a:hover{color:#ff6419}
+</style>
+</helmet>
+<div style="background:{{ bg }};color:{{ ink }};min-height:100vh;transition:background .3s,color .3s">
+
+<nav style="position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:24px;background:#131313;padding:14px clamp(20px,5vw,60px);flex-wrap:wrap">
+  <div style="display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;color:#fff5fa">
+    <div style="width:36px;height:36px;border-radius:50%;background:#ff6ba8;color:#131313;display:grid;place-items:center;font-size:16px">&lt;/&gt;</div>
+    <span>div<span style="color:#ff6ba8">a</span></span>
+  </div>
+  <div style="display:flex;align-items:center;gap:20px 24px;flex-wrap:wrap">
+    <a href="#inicio" style="color:#fff5fa;font-size:16px;white-space:nowrap" style-hover="color:#ff6ba8">Início</a>
+    <a href="#musicas" style="color:#fff5fa;font-size:16px;white-space:nowrap" style-hover="color:#ff6ba8">Minhas músicas</a>
+    <a href="#sobre-mim" style="color:#fff5fa;font-size:16px;white-space:nowrap" style-hover="color:#ff6ba8">Sobre mim</a>
+    <a href="#minha-era" style="color:#fff5fa;font-size:16px;white-space:nowrap" style-hover="color:#ff6ba8">Minha era</a>
+    <button onClick="{{ toggleTheme }}" style="width:40px;height:40px;border:none;border-radius:50%;background:#ff6ba8;cursor:pointer;font-size:18px;display:grid;place-items:center" title="Trocar tema">{{ themeIcon }}</button>
+  </div>
+</nav>
+
+<section id="inicio" style="display:flex;justify-content:space-between;align-items:center;gap:48px;padding:clamp(48px,8vw,100px) clamp(20px,5vw,60px);max-width:1240px;margin:0 auto;flex-wrap:wrap">
+  <div style="flex:1 1 440px;display:flex;flex-direction:column;gap:24px;align-items:flex-start">
+    <span style="background:#b4fa64;color:#131313;font-weight:700;font-size:14px;padding:6px 14px;border-radius:30px;letter-spacing:.04em;white-space:nowrap">SEU ANO EM REVISÃO</span>
+    <h1 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(48px,7vw,88px);line-height:.95;letter-spacing:-.03em;text-wrap:balance">Maysa's Wrapped <span style="color:#ff6419">2026</span></h1>
+    <p style="margin:0;font-size:20px;line-height:1.5;max-width:480px;text-wrap:pretty">Um resumo de tudo que marcou o meu ano: as músicas que mais ouvi, o que eu amo e a fase que estou vivendo.</p>
+    <a href="#musicas" style="background:#ff6ba8;color:#131313;border-radius:30px;padding:16px 36px;font-size:18px;font-weight:700;white-space:nowrap;display:inline-flex" style-hover="background:#ff6419;color:#131313">Ver meu Wrapped →</a>
+  </div>
+  <div style="position:relative;width:380px;height:380px;flex:0 0 auto">
+    <div style="position:absolute;inset:-14px;border-radius:50%;background:#b4fa64"></div>
+    <image-slot id="minha-foto" shape="circle" placeholder="minha-foto.jpg" style="position:absolute;inset:0;width:380px;height:380px"></image-slot>
+    <div style="position:absolute;right:-10px;bottom:24px;background:#ff6419;color:#fff5fa;font-weight:700;padding:10px 18px;border-radius:30px;transform:rotate(-6deg)">oi, eu sou a Maysa ✨</div>
+  </div>
+</section>
+
+<section id="musicas" style="padding:60px clamp(20px,5vw,60px);max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:36px;align-items:center">
+  <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(32px,4vw,44px);color:#ff6419;text-align:center">✦ Top 3 músicas do momento ✦</h2>
+  <div style="display:flex;justify-content:center;gap:28px;flex-wrap:wrap">
+    <sc-for list="{{ songs }}" as="s" hint-placeholder-count="3">
+      <div style="background:#131313;color:#fff5fa;width:280px;padding:24px;border-radius:24px;display:flex;flex-direction:column;gap:14px;transition:transform .2s" style-hover="transform:translateY(-6px) rotate(-1deg)">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;color:#b4fa64;line-height:1">{{ s.n }}</span>
+        <image-slot id="{{ s.id }}" shape="rounded" radius="14" placeholder="{{ s.file }}" style="width:232px;height:232px"></image-slot>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <h3 style="margin:0;font-size:22px">{{ s.title }}</h3>
+          <p style="margin:0;opacity:.75">{{ s.artist }}</p>
+        </div>
+        <a href="https://www.youtube.com/" target="_blank" style="align-self:flex-start;background:#ff6419;color:#fff5fa;padding:10px 20px;border-radius:30px;font-weight:700;font-size:15px" style-hover="background:#ff6ba8;color:#131313">▶ Ouvir no YouTube</a>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="sobre-mim" style="padding:60px clamp(20px,5vw,60px);max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:36px;align-items:center">
+  <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(32px,4vw,44px);color:#ff6419;text-align:center">✦ Sobre mim ✦</h2>
+  <div style="display:flex;justify-content:center;gap:28px;flex-wrap:wrap">
+    <div style="background:#ff6ba8;color:#131313;width:360px;padding:32px;border-radius:24px;display:flex;flex-direction:column;gap:18px">
+      <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:28px">Minha personalidade</h3>
+      <sc-for list="{{ traits }}" as="t" hint-placeholder-count="3">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;font-size:19px;font-weight:700"><span>{{ t.label }}</span><span>{{ t.pct }}%</span></div>
+          <div style="height:12px;border-radius:12px;background:rgba(19,19,19,.18);overflow:hidden"><div style="height:100%;width:{{ t.w }};background:#131313;border-radius:12px"></div></div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="background:#b4fa64;color:#131313;width:360px;padding:32px;border-radius:24px;display:flex;flex-direction:column;gap:14px">
+      <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:28px">Top 3 coisas que amo</h3>
+      <sc-for list="{{ loves }}" as="l" hint-placeholder-count="3">
+        <div style="display:flex;align-items:baseline;gap:16px;font-size:24px;border-bottom:2px solid rgba(19,19,19,.15);padding-bottom:10px">
+          <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:#ff6419">{{ l.n }}</span><span style="font-weight:500">{{ l.t }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="minha-era" style="padding:60px clamp(20px,5vw,60px);max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:36px;align-items:stretch">
+  <h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(32px,4vw,44px);color:#ff6419;text-align:center">✦ Minha era atual ✦</h2>
+  <div style="background:#ff6419;color:#fff5fa;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(28px,4vw,48px);padding:48px 32px;border-radius:24px;text-align:center;text-wrap:balance">✨ tentando aprender frontend ✨</div>
+</section>
+
+<footer style="background:#131313;color:#fff5fa;text-align:center;padding:24px;margin-top:60px;font-size:15px">© 2026 Maysa's Wrapped. Feito com 🩷 no minicurso &lt;div&gt;a.</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { dark: false };
+  renderVals() {
+    const dark = this.state.dark;
+    return {
+      bg: dark ? '#131313' : '#fff5fa',
+      ink: dark ? '#fff5fa' : '#423a39',
+      themeIcon: dark ? '☀️' : '🌙',
+      toggleTheme: () => this.setState(s => ({ dark: !s.dark })),
+      songs: [1, 2, 3].map(i => ({ n: '0' + i, id: 'capa' + i, file: 'capa' + i + '.jpg', title: 'Nome da música', artist: 'Artista' })),
+      traits: [['café ☕', 70], ['código 💻', 20], ['sanidade 🫠', 10]].map(([label, pct]) => ({ label, pct, w: pct + '%' })),
+      loves: [['01', 'música'], ['02', 'praia'], ['03', 'tecnologia']].map(([n, t]) => ({ n, t }))
+    };
+  }
+}
+</script>
+</body>
+</html>
