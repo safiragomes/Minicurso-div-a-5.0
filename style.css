@@ -1,0 +1,188 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  padding: 0 50px;
+  background: white;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  gap: 40px;
+  font-size: 16px;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #e12562;
+}
+
+a:hover {
+  color: #ff6419;
+}
+
+#logo {
+  width: 10vh;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(to right,white, #f35695);
+  height: 550px;
+}
+
+#picture {
+  width: 35%;
+  background: transparent;
+}
+
+.text {
+  max-width: 50%;
+  color: #131313;
+  background: transparent;
+}
+
+.text h1 {
+  font-size: 35px;
+  color: #e12562;
+}
+
+.text p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #444;
+}
+
+.text .highlight {
+  color: #e12562;
+  font-weight: bold;
+}
+
+.my-story {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6419;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.my-story:hover {
+  background-color: #ff8142;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 170px;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f35695;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+}
+
+.card:hover {
+  background-color: #ff6ba8;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: #131313;
+  color: #fff5fa;
+}
+
+#theme-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Dark Mode */
+
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .theme-button {
+  color: #ff6ba8;
+}
+
+
+.dark-mode header {
+  background-color: #333;
+}
+
+.dark-mode button {
+  background-color: #ff6419;
+  color: white;
+}
+
+.dark-mode .main {
+  background: linear-gradient(to right,#121212, #a31844);
+}
+
+.dark-mode .text {
+  color: #ff6ba8;
+  background-color: transparent;
+}
+
+.dark-mode h1 {
+  color: #ff6ba8;
+  background-color: transparent;
+}
+
+.dark-mode h3 {
+  background-color: transparent;
+}
+
+.dark-mode p{
+  color: #e0e0e0;
+  background-color: transparent;
+}
+
+.dark-mode .highlight {
+  color: #ff6ba8;
+  background-color: transparent;
+}
+
+.dark-mode .card {
+  background-color: #e12562;
+}
+
+.dark-mode .card:hover {
+  background-color: #e03a6f;
+}
