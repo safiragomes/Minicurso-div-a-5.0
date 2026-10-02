@@ -1,13 +1,27 @@
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "DM Sans", sans-serif;
   margin: 0;
+  background-color: #fff5fa;
+  color: #131313;
 }
+
+h1, h2, h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+
+/* Navbar */
 
 .navbar {
   display: flex;
   padding: 0 50px;
   background: white;
   justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 10vh;
 }
 
 .links {
@@ -26,66 +40,151 @@ a:hover {
   color: #ff6419;
 }
 
-#logo {
-  width: 10vh;
-}
+
+/* Início */
 
 .main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
-  background: linear-gradient(to right,white, #f35695);
-  height: 550px;
-}
-
-#picture {
-  width: 35%;
-  background: transparent;
+  flex-wrap: wrap;
+  gap: 48px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 100px) clamp(20px, 5vw, 60px);
 }
 
 .text {
-  max-width: 50%;
+  flex: 1 1 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.tag {
+  background-color: #b4fa64;
   color: #131313;
-  background: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
 .text h1 {
-  font-size: 35px;
-  color: #e12562;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.title-logo {
+  height: 2em;
+}
+
+.title-text {
+  font-size: 1em;
+}
+
+.text h1 .year {
+  color: #ff6419;
 }
 
 .text p {
+  margin: 0;
   font-size: 20px;
-  margin-top: 20px;
-  color: #444;
+  line-height: 1.5;
+  max-width: 480px;
 }
 
-.text .highlight {
-  color: #e12562;
-  font-weight: bold;
+.button {
+  display: inline-flex;
+  padding: 16px 36px;
+  background-color: #ff6ba8;
+  color: #131313;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-.my-story {
-  margin-top: 20px;
-  padding: 10px 20px;
+.button:hover {
   background-color: #ff6419;
-  border: none;
-  color: white;
-  font-size: 20px;
-  border-radius: 5px;
-  cursor: pointer;
+  color: #131313;
 }
 
-.my-story:hover {
-  background-color: #ff8142;
+.photo-wrapper {
+  position: relative;
+  flex: 0 0 auto;
+  width: 380px;
+  height: 380px;
 }
 
-.time {
+.photo-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background-color: #b4fa64;
+}
+
+.photo-placeholder {
+  position: absolute;
+  inset: 0;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background-color: #ffd6e8;
+  color: #131313;
   display: flex;
   flex-direction: column;
-  padding: 50px 170px;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+#picture {
+  position: absolute;
+  inset: 0;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  right: -10px;
+  bottom: 24px;
+  background-color: #ff6419;
+  color: #fff5fa;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 30px;
+  transform: rotate(-6deg);
+}
+
+
+/* Músicas */
+
+.music {
+  padding: 50px;
+  text-align: center;
+}
+
+.music h2 {
+  color: #ff6419;
+  font-size: 35px;
 }
 
 .cards {
@@ -96,93 +195,300 @@ a:hover {
 }
 
 .card {
-  width: 200px;
+  width: 250px;
   text-align: center;
   padding: 20px;
-  background-color: #f35695;
-  border-radius: 10px;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffd6e8;
+  border-radius: 20px;
+  color: #131313;
 }
 
 .card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 10%;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+}
+
+.number {
+  font-size: 35px;
+  font-weight: bold;
+  color: #ff6419;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #ff6419;
+  color: white;
+  border-radius: 20px;
+}
+
+.card-button:hover {
+  background-color: #ff6ba8;
+  color: white;
 }
 
 .card:hover {
+  background-color: #ffc2dc;
+}
+
+
+/* Sobre mim */
+
+.about {
+  padding: 50px;
+  text-align: center;
+}
+
+.about h2 {
+  color: #ff6419;
+  font-size: 35px;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.personality {
+  width: 280px;
+  padding: 25px;
+  background-color: #ff6ba8;
+  border-radius: 20px;
+  color: #131313;
+  text-align: left;
+}
+
+.personality h3 {
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.trait {
+  background-color: #fff5fa;
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+
+.trait:last-child {
+  margin-bottom: 0;
+}
+
+.trait-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.trait-bar {
+  height: 10px;
+  border-radius: 10px;
+  background-color: #f3dbe6;
+  overflow: hidden;
+}
+
+.trait-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.trait-fill.cafe {
+  width: 70%;
+  background-color: #ff6419;
+}
+
+.trait-fill.codigo {
+  width: 20%;
   background-color: #ff6ba8;
 }
+
+.trait-fill.sanidade {
+  width: 10%;
+  background-color: #131313;
+}
+
+.favorites {
+  width: 280px;
+  padding: 25px;
+  background-color: #b4fa64;
+  border-radius: 20px;
+  color: #131313;
+  text-align: left;
+}
+
+.favorites h3 {
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.love {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #fff5fa;
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.love:last-child {
+  margin-bottom: 0;
+}
+
+.love-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  color: #131313;
+}
+
+.badge-1 {
+  background-color: #ff6ba8;
+}
+
+.badge-2 {
+  background-color: #ff6419;
+  color: #fff5fa;
+}
+
+.badge-3 {
+  background-color: #131313;
+  color: #fff5fa;
+}
+
+
+/* Minha era */
+
+.era {
+  padding: 50px;
+  text-align: center;
+}
+
+.era h2 {
+  color: #ff6419;
+  font-size: 35px;
+}
+
+.era-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+
+  background-color: #ff6419;
+  color: white;
+
+  border-radius: 20px;
+  text-align: left;
+}
+
+.era-text {
+  flex: 1 1 320px;
+}
+
+.era-text p {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.era-text h3 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.studies {
+  flex: 0 1 280px;
+  background-color: #fff5fa;
+  color: #131313;
+  padding: 20px 24px;
+  border-radius: 15px;
+}
+
+.studies h3 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.studies p {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+
+/* Nossa equipe */
+
+.team {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.team h2 {
+  color: #ff6419;
+  font-size: 35px;
+}
+
+.team-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.team-card {
+  flex: 1 1 0;
+  max-width: 180px;
+  padding: 20px;
+  background-color: #ffd6e8;
+  border-radius: 20px;
+  color: #131313;
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  margin: 10px 0 5px;
+}
+
+.team-card:hover {
+  background-color: #ffc2dc;
+}
+
+
+/* Footer */
 
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
   height: 10vh;
-  background-color: #131313;
-  color: #fff5fa;
-}
 
-#theme-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-/* Dark Mode */
-
-.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-.dark-mode .theme-button {
-  color: #ff6ba8;
-}
-
-
-.dark-mode header {
-  background-color: #333;
-}
-
-.dark-mode button {
-  background-color: #ff6419;
-  color: white;
-}
-
-.dark-mode .main {
-  background: linear-gradient(to right,#121212, #a31844);
-}
-
-.dark-mode .text {
-  color: #ff6ba8;
-  background-color: transparent;
-}
-
-.dark-mode h1 {
-  color: #ff6ba8;
-  background-color: transparent;
-}
-
-.dark-mode h3 {
-  background-color: transparent;
-}
-
-.dark-mode p{
-  color: #e0e0e0;
-  background-color: transparent;
-}
-
-.dark-mode .highlight {
-  color: #ff6ba8;
-  background-color: transparent;
-}
-
-.dark-mode .card {
-  background-color: #e12562;
-}
-
-.dark-mode .card:hover {
-  background-color: #e03a6f;
+  background: white;
+  color: #131313;
 }

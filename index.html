@@ -1,80 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>&lt;div&gt;a 3.0 🩷</title>
-  </head>
+<html>
 
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>&lt;div&gt;a Wrapped 2026</title>
+
+    <!-- Fonte utilizada na página -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Conectando nosso arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVEGAÇÃO -->
     <nav class="navbar">
-      <img id="logo" src="./assets/logo.png" alt="logo" />
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">Sobre nós</a> 
-        <!-- aqui elas colocam sobre mim -->
-        <a href=#nosso-time>Conheça o time</a>
-        <!-- no lugar de conheça o time fica, meus projetos algo assim -->
-        <a href="https://www.instagram.com/diva.citi/">Fala com a gente</a>
-        <!-- e aqui pode ser um contato não sei p por as redes sociais -->
-        <button id="theme-button">
-          <img src="./assets/moon.svg" alt="tema escuro" width="20" />
-        </button>
-        <script src="./dark-mode.js"></script>
-
-      </div>
+        <img id="logo" src="./assets/logo.png" alt="logo" />
+        <div class="links">
+            <a href="#inicio">Início</a>
+            <a href="#nossa-equipe">Nossa equipe</a>
+            <a href="#musicas">Minhas músicas</a>
+            <a href="#sobre-mim">Sobre mim</a>
+            <a href="#minha-era">Minha era</a>
+        </div>
     </nav>
-    
-    <section class="main">
-      <div class="text">
-        <h1>Codificando o futuro com mais mulheres, mais força e mais inovação</h1>
-        <p>Feito por mulheres e para mulheres, o <span class="highlight">&lt;div&gt;a</span> é uma comunidade de apoio, troca de experiências e crescimento na área de tecnologia.</p>
-        <a href='https://www.instagram.com/diva.citi' target="_blank">
-        <button class="my-story">Saiba mais</button> </a>
-      </div>
-      <img id="picture" src="./assets/ada-lovelace.png" alt="ada" />
+
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="main">
+
+        <div class="text">
+
+            <span class="tag">
+                VOCÊ EM REVISÃO
+            </span>
+
+            <h1>
+                <img src="./assets/logo2.png" alt="<div>a" class="title-logo">
+                <span class="title-text">Wrapped <span class="year">2026</span></span>
+            </h1>
+
+            <p>
+                Feito por mulheres e para mulheres, o &lt;div&gt;a
+                é uma comunidade de apoio, troca de experiências
+                e crescimento na área de tecnologia.
+            </p>
+
+            <a href="#musicas" class="button">
+                Ver meu Wrapped →
+            </a>
+
+        </div>
+
+        <div class="photo-wrapper">
+            <div class="photo-placeholder">📷<br>Sua foto aqui</div>
+            <img id="picture" src="./assets/equipe.JPG" alt="Equipe diva" onerror="this.style.display='none'">
+            <span class="badge">oi, somos o &lt;div&gt;a ✨</span>
+        </div>
+
     </section>
 
-    <div class="time" id="nosso-time">
-      <h2>✦ Conheça o time ✦</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="./assets/bia.jpg" alt="beatriz" />
-          <h3>Beatriz dos Anjos</h3>
-          <p>Analista de software</p>
+
+    <!-- NOSSA EQUIPE -->
+    <section id="nossa-equipe" class="team">
+
+        <h2>✦ Nossa equipe ✦</h2>
+
+        <div class="team-cards">
+
+            <div class="team-card">
+                <img src="./assets/bia.JPG" alt="Beatriz Pedrosa">
+                <h3>Beatriz Pedrosa</h3>
+                <p>Analista de software</p>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/sofiadev.JPG" alt="Sofia Avallone">
+                <h3>Sofia Avallone</h3>
+                <p>Gerente de software</p>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/julia.JPG" alt="Julia Andrade">
+                <h3>Julia Andrade</h3>
+                <p>Gerente de CS</p>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/safira.JPG" alt="Safira Moraes">
+                <h3>Safira Moraes</h3>
+                <p>Desenvolvedora de software</p>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/maysa.JPG" alt="Maysa Campelo">
+                <h3>Maysa Campelo</h3>
+                <p>Desenvolvedora de software</p>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/sofia.JPG" alt="Sofia Mendonça">
+                <h3>Sofia Mendonça</h3>
+                <p>Analista de Dados</p>
+            </div>
+
         </div>
-        <div class="card">
-          <img src="./assets/luiza.png" alt="luiza" />
-          <h3>Luiza Trigueiro</h3>
-          <p>Gerente de software</p>
-        </div>
-        <div class="card">
-          <img src="./assets/ana-livia.jpg" alt="ana-livia" />
-          <h3>Ana Lívia</h3>
-          <p>Desenvolvedora de software</p>
-        </div>
-        <div class="card">
-          <img src="./assets/eduarda.jpg" alt="eduarda" />
-          <h3>Eduarda Rodrigues</h3>
-          <p>Desenvolvedora de software</p>
-        </div>
-        <div class="card">
-          <img src="./assets/isabelle.jpg" alt="isabelle" />
-          <h3>Isabelle Tenório</h3>
-          <p>Desenvolvedora de software</p>
-        </div>
-        <div class="card">
-          <img src="./assets/kauanny.jpg" alt="kauanny" />
-          <h3>Kauanny Barros</h3>
-          <p>Desenvolvedora de software</p>
-        </div>
-      </div>
-    </div>
+
+    </section>
 
 
+    <!-- MÚSICAS -->
+    <section id="musicas" class="music">
+
+        <h2>✦ Top 3 músicas do momento ✦</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <span class="number">01</span>
+
+                <img src="./assets/TaylorSwift.png" alt="Capa da música">
+
+                <h3>Style</h3>
+                <p>Taylor Swift</p>
+
+                <a href="https://youtu.be/w6Y8fvBczYM?si=dArvnVygotEvUMQj" target="_blank" class="card-button">
+                    ▶ Ouvir no YouTube
+                </a>
+            </div>
+
+
+            <div class="card">
+                <span class="number">02</span>
+
+                <img src="./assets/oliviaRodrigo.jpg" alt="Capa da música">
+
+                <h3>Deja vu</h3>
+                <p>Olivia Rodrigo</p>
+
+                <a href="https://youtu.be/cii6ruuycQA?si=RRg9wc-I95dNE8tz" target="_blank" class="card-button">
+                    ▶ Ouvir no YouTube
+                </a>
+            </div>
+
+
+            <div class="card">
+                <span class="number">03</span>
+
+                <img src="./assets/sabrinaCarpenter.jpg" alt="Capa da música">
+
+                <h3>Espresso</h3>
+                <p>Sabrina Carpenter</p>
+
+                <a href="https://www.youtube.com/watch?v=eVli-tstM5E&list=RDeVli-tstM5E&start_radio=1" target="_blank" class="card-button">
+                    ▶ Ouvir no YouTube
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE MIM -->
+    <section id="sobre-mim" class="about">
+
+        <h2>✦ Sobre mim ✦</h2>
+
+        <div class="about-cards">
+
+            <div class="personality">
+
+                <h3>Minha personalidade</h3>
+
+                <div class="trait">
+                    <div class="trait-label">
+                        <span>café ☕</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="trait-bar">
+                        <div class="trait-fill cafe"></div>
+                    </div>
+                </div>
+
+                <div class="trait">
+                    <div class="trait-label">
+                        <span>código 💻</span>
+                        <span>20%</span>
+                    </div>
+                    <div class="trait-bar">
+                        <div class="trait-fill codigo"></div>
+                    </div>
+                </div>
+
+                <div class="trait">
+                    <div class="trait-label">
+                        <span>sanidade 🫠</span>
+                        <span>10%</span>
+                    </div>
+                    <div class="trait-bar">
+                        <div class="trait-fill sanidade"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="favorites">
+
+                <h3>Top 3 coisas que amo</h3>
+
+                <div class="love">
+                    <span class="love-badge badge-1">01</span>
+                    <span>música 🎧</span>
+                </div>
+
+                <div class="love">
+                    <span class="love-badge badge-2">02</span>
+                    <span>praia 🌊</span>
+                </div>
+
+                <div class="love">
+                    <span class="love-badge badge-3">03</span>
+                    <span>tecnologia 💻</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MINHA ERA -->
+    <section id="minha-era" class="era">
+
+        <h2>✦ Minha era atual ✦</h2>
+
+        <div class="era-card">
+
+            <div class="era-text">
+                <p>em 2026 eu estou na era de...</p>
+
+                <h3>
+                    ✨ aprender frontend ✨
+                </h3>
+            </div>
+
+
+            <div class="studies">
+
+                <h3>O que estou estudando</h3>
+
+                <p>✅ HTML</p>
+                <p>✅ CSS</p>
+                <p>⏳ JavaScript</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
     <footer>
-      <p>© 2025 &lt;div&gt;a. Todos os direitos reservados.</p>
+        <p>© 2026 &lt;div&gt;a Wrapped. Feito com 🩷 no minicurso &lt;div&gt;a. Siga a gente no <a href="https://www.instagram.com/diva.citi/" target="_blank">Instagram</a>.</p>
     </footer>
-  </body>
+
+</body>
+
 </html>
