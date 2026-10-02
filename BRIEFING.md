@@ -83,7 +83,7 @@ Navbar e rodapé usam fundo branco (`white`), diferente da paleta rosa/verde/lar
 - Seção: `padding:50px; text-align:center`; h2 `color:#ff6419; font-size:35px`
 - `.era-card`: fundo `#ff6419`, texto branco, `display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:30px; max-width:900px; margin:auto; padding:40px; border-radius:20px; text-align:left`
   - `.era-text` (`flex:1 1 320px`): parágrafo "em 2026 eu estou na era de..." (`font-size:18px; margin-bottom:8px`) + `h3` "✨ aprender frontend ✨" (`font-size:40px; font-weight:800; line-height:1.1`)
-  - `.studies` (`flex:0 1 280px`): card claro — fundo `#fff5fa`, texto `#131313`, `padding:20px 24px; border-radius:15px`; `h3` "O que estou estudando" (`font-size:18px; margin-bottom:12px`); itens `✅ HTML`, `✅ CSS`, `⏳ JavaScript` (`font-size:18px; margin:8px 0`)
+  - `.studies` (`flex:0 1 280px`): card claro — fundo `#fff5fa`, texto `#131313`, `padding:20px 24px; border-radius:15px`; `h3` "O que estou estudando" (`font-size:18px; margin-bottom:12px`); itens `✅ HTML`, `✅ CSS` (`font-size:18px; margin:8px 0`)
 
 ## 7. Rodapé (`footer`)
 - `display:flex; justify-content:center; align-items:center; height:10vh; background:white; color:#131313` (mesma cor da navbar)
